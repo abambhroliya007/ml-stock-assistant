@@ -1,0 +1,18 @@
+# Virtual environments
+.venv/
+.ven/
+venv/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Large data files
+data/prices.csv
+data/prices.parquet
+data/*.csv
+
+# Editor / OS
+.vscode/
+.DS_Store
+Thumbs.db
