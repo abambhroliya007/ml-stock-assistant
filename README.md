@@ -20,11 +20,11 @@ This project combines data processing, ML models, and a simple interface/API to 
 ## 🛠 Tech Stack
 
 - **Python 3.8+**
-- **Pandas / NumPy** – data manipulation
-- **Scikit-learn** – machine learning models
-- **Matplotlib / Seaborn** – visualization (if applicable)
-- **Flask / FastAPI** – backend API (if applicable)
-- **HTML/CSS/JS** – frontend (if applicable)
+- **Pandas / NumPy** - data manipulation
+- **Scikit-learn** - machine learning models
+- **Matplotlib / Seaborn** - visualization (if applicable)
+- **Flask / FastAPI** - backend API (if applicable)
+- **HTML/CSS/JS** - frontend (if applicable)
 
 *(Adjust this section as your stack evolves.)*
 
