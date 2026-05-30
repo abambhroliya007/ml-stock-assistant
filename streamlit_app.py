@@ -141,10 +141,18 @@ def forecast_chart(df_forecast, ticker, model_used):
 
 try:
     df = get_data()
-except Exception as e:
-    st.error(f"Could not load data: {e}")
-    st.info("Run `python fetch_sp500_data.py` first to create data/prices.csv.")
-    st.stop()
+
+except Exception:
+    st.warning("Local dataset not found. Downloading S&P 500 data...")
+
+    from fetch_sp500_data import main as fetch_data
+
+    with st.spinner("Downloading market data. This may take a minute..."):
+        fetch_data()
+
+    df = get_data()
+
+    st.success("Data loaded successfully.")
 
 
 tickers_available = sorted(df["ticker"].unique())
