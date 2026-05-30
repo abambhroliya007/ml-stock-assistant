@@ -1,6 +1,7 @@
 import os
 import time
 from datetime import datetime
+from io import StringIO
 
 import pandas as pd
 import requests
@@ -33,7 +34,7 @@ def get_sp500_tickers() -> list[str]:
     r = requests.get(WIKI_SP500_URL, headers=headers, timeout=30)
     r.raise_for_status()
 
-    tables = pd.read_html(r.text)
+    tables = pd.read_html(StringIO(r.text))
     df = tables[0]  # constituents table
 
     tickers = df["Symbol"].astype(str).str.strip().str.upper().tolist()
