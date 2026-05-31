@@ -308,22 +308,11 @@ elif mode == "Compare":
 
     st.subheader("Comparison Table")
 
-    styled = compare_df.style.format(
-        {
-            "CAGR": "{:.2%}",
-            "Sharpe": "{:.2f}",
-            "Annual Vol": "{:.2%}",
-            "Max Drawdown": "{:.2%}",
-        }
-    ).background_gradient(
-        subset=["CAGR", "Sharpe"],
-        cmap="Greens",
-    ).background_gradient(
-        subset=["Annual Vol"],
-        cmap="Reds",
-    ).background_gradient(
-        subset=["Max Drawdown"],
-        cmap="RdYlGn",
-    )
+    display_df = compare_df.copy()
 
-    st.dataframe(styled, use_container_width=True)
+display_df["CAGR"] = display_df["CAGR"].map(lambda x: f"{x:.2%}")
+display_df["Sharpe"] = display_df["Sharpe"].map(lambda x: f"{x:.2f}")
+display_df["Annual Vol"] = display_df["Annual Vol"].map(lambda x: f"{x:.2%}")
+display_df["Max Drawdown"] = display_df["Max Drawdown"].map(lambda x: f"{x:.2%}")
+
+st.dataframe(display_df, use_container_width=True)
