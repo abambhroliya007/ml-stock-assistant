@@ -1,7 +1,7 @@
 # 📈 ML Stock Assistant
 
 ### 🚀 Live Demo
-👉 **https://YOUR-STREAMLIT-LINK.streamlit.app**
+👉 [**https://YOUR-STREAMLIT-LINK.streamlit.app**](https://ml-stock-assistant-5hu7gkpha2p6n52ayppwny.streamlit.app/)
 
 An interactive machine learning-powered stock analytics platform for S&P 500 equities featuring forecasting, risk analysis, stock comparison, and interactive visualizations.
 
