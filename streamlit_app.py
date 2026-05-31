@@ -310,9 +310,9 @@ elif mode == "Compare":
 
     display_df = compare_df.copy()
 
-display_df["CAGR"] = display_df["CAGR"].map(lambda x: f"{x:.2%}")
-display_df["Sharpe"] = display_df["Sharpe"].map(lambda x: f"{x:.2f}")
-display_df["Annual Vol"] = display_df["Annual Vol"].map(lambda x: f"{x:.2%}")
-display_df["Max Drawdown"] = display_df["Max Drawdown"].map(lambda x: f"{x:.2%}")
+    display_df["CAGR"] = display_df["CAGR"].map(lambda x: f"{x:.2%}")
+    display_df["Sharpe"] = display_df["Sharpe"].map(lambda x: f"{x:.2f}")
+    display_df["Annual Vol"] = display_df["Annual Vol"].map(lambda x: f"{x:.2%}")
+    display_df["Max Drawdown"] = display_df["Max Drawdown"].map(lambda x: f"{x:.2%}")
 
-st.dataframe(display_df, use_container_width=True)
+    st.dataframe(display_df, use_container_width=True)
