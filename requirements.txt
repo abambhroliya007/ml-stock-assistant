@@ -8,3 +8,4 @@ yfinance
 lxml
 requests
 jinja2
+pyarrow

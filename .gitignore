@@ -9,7 +9,6 @@ __pycache__/
 
 # Large data files
 data/prices.csv
-data/prices.parquet
 data/*.csv
 
 # Editor / OS
